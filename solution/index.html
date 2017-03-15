@@ -1,36 +1,190 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Starter Page</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-<body>
-    
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 col-sm-6">Col 1</div>
-      <div class="col-md-4 col-sm-6">Col 2</div>
-      <div class="col-md-4 col-sm-6">Col 3</div>
-    </div>
-      <div class="row">
-      <div class="col-md-4 col-sm-6">Col 1</div>
-      <div class="col-md-4 col-sm-6">Col 2</div>
-      <div class="col-md-4 col-sm-6">Col 3</div>
-    </div>
-      <div class="row">
-      <div class="col-xs-6">Col 1</div><!--never collapse-->
-      <div class="col-xs-6">Col 2</div><!--never collapse-->
-      <div class="col-xs-6">Col 3</div><!--never collapse-->
-    </div>
-  </div>
+    <!DOCTYPE html> 
+    <html> 
+    <head> 
+      <meta charset="utf-8"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Responsive Layout</title> 
 
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+      <style> 
+
+       * {
+        box-sizing: border-box; 
+        font-family: Helvetica; 
+        font-size: 17px;
+        
+      }
+
+      h1 {
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 29.75px;
+      } 
+
+      #p-chicken {
+        background-color: #B4B4B4; 
+        margin-top: 45px; 
+        padding-left: 7px;
+        padding-right: 7px;
+        color: white;
+        background-color: #B4B4B4;
+      } 
+
+      #p-beef {
+        background-color: #B4B4B4; 
+        margin-top: 40px; 
+        padding-left: 7px;
+        padding-right: 7px;
+
+        color: white;
+        background-color: #B4B4B4;
+      } 
+
+      #p-sushi {
+        background-color: #B4B4B4; 
+        margin-top: 40px; 
+        padding-left: 7px;
+        padding-right: 7px;
+
+        color: white;
+        background-color: #B4B4B4;
+      } 
+
+      .row {
+        width: 100%;
+        height: 300px;
+        position: relative;
+      } 
+
+      #chicken {
+        border: 1px solid black;
+        position: absolute; 
+        font-size: 21.25px;
+        top: 0px;
+        right: 0px; 
+        padding-bottom: 5px;
+        padding-top: 5px; 
+        width:100px;
+
+        margin-top:0; 
+        margin-bottom: 0;
+        text-align: center;
+        background-color: #E9967A; color: black;
+      } 
+
+      #beef {
+        border: 1px solid black;
+        position: absolute; 
+        font-size: 21.25px;
+        top: 0px;
+        right: 0px; 
+        width:100px;
+        padding-bottom: 5px; 
+        padding-top: 5px; 
+        margin-top: 0px;
+        margin-bottom: 0;
+        text-align: center;
+        padding: auto;
+        background-color: #B22222;
+      } 
+
+      #sushi {
+        border: 1px solid black;
+        position: absolute;
+        font-size: 21.25px;
+        top: 0px;
+        right: 0px; 
+        width:100px; 
+        padding-bottom: 5px; 
+        padding-top: 5px; 
+
+        margin-top:0; 
+        margin-bottom: 0; 
+        text-align: center; 
+        padding: auto; 
+        background-color: #F0E68C; 
+        color: black; 
+      } 
+
+      #box {
+        background-color: #B4B4B4; 
+        position: relative;
+        height: 165px;
+        border: 1px solid black; 
+        margin-left: 15px; 
+        margin-right: 15px; 
+        overflow: hidden;
+      } 
+
+      #content {
+        background-color: #90EE90;               
+      } 
+
+
+
+      /********** desktop view **********/ 
+      @media (min-width: 992px) {
+
+        .col-lg-3 {
+          float: left;
+          position: relative;
+          padding-left: 5px; 
+          padding-right: 5px;
+          width: 33.33%; 
+        } 
+
+
+      } 
+
+
+      /********** tablet view **********/ 
+      @media (min-width: 768px) and (max-width: 991px) {
+
+        .col-md-1 {
+         width: 100%; 
+         margin-top: 30px;
+         float: left; 
+       } 
+       .col-md-2 {
+         width: 50%; 
+         float: left; 
+       } 
+     }
+
+
+     /********** mobile view **********/ 
+     @media (max-width: 767px){
+      .col-xs-1 {
+        margin-top: 30px;
+        width: 100%;
+      } 
+
+    }
+
+  </style> 
+</head> 
+<body> 
+  <h1>Our Menu</h1> 
+  <div class="row"> 
+    <div class="col-lg-3 col-md-2"> 
+      <div id="box"> 
+        <p id="chicken">Chicken</p> 
+        <p id="p-chicken">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p> 
+      </div> 
+    </div> 
+
+    <div class="col-lg-3 col-md-2 col-xs-1 ">
+     <div id="box">
+      <p id="beef">Beef</p>
+      <p id="p-beef">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> 
+    </div> 
+  </div> 
+
+  <div class="col-lg-3 col-md-1 col-xs-1 ">
+    <div id="box"> 
+      <p id="sushi">Sushi</p> 
+      <p id="p-sushi">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> 
+    </div> 
+  </div>
+</div > 
+</body> 
 </html>
